@@ -23,28 +23,25 @@ jobs:
 
       - name: Process IPTV and Domains
         run: |
-          # 1. Загружаем основной лист IPTV
+          # 1. Загружаем лист
           curl -Lo IPTV_RULIST "https://raw.githubusercontent.com/Dimonovich/TV/refs/heads/Dimonovich/FREE/TV"
           
-          # 2. Вытаскиваем все уникальные хосты (убираем http/https и пути)
+          # 2. Вытаскиваем ХОСТЫ (убираем протоколы, порты и пути)
           grep -oP 'https?://\K[^/[:space:]]+' IPTV_RULIST | sed 's/:.*//' | sort -u > all_hosts.txt
           
-          # 3. Собираем ВСЕ IP-адреса (теперь фильтр найдет всё)
+          # 3. Собираем ВСЕ IP-адреса
           grep -P '^(\d{1,3}\.){3}\d{1,3}$' all_hosts.txt > IPTVRUip || true
           
-          # 4. Собираем ВСЕ домены (те, где есть хотя бы одна буква)
+          # 4. Собираем ВСЕ домены (где есть буквы)
           grep -P '[a-zA-Z]' all_hosts.txt > iptv_only_domains.txt || true
 
-          # 5. Склеиваем всё в один JSON для sing-box
-          # Вытягиваем твои ручные правила
+          # 5. Склеиваем с твоим ru-limitless.json
           jq -r '.rules[0].domain[]' ru-limitless.json > manual_domains.txt
           jq -r '.rules[0].domain_suffix[]' ru-limitless.json > manual_suffixes.txt
 
           echo '{ "version": 1, "rules": [ { "domain": [' > final.json
-          # Объединяем домены из твоего JSON и вытянутые из IPTV
           cat manual_domains.txt iptv_only_domains.txt | sort -u | sed 's/.*/"&"/' | paste -sd, >> final.json
           echo '], "domain_suffix": [' >> final.json
-          # Добавляем суффиксы (.ru, .рф и т.д.)
           sed 's/.*/"&"/' manual_suffixes.txt | paste -sd, >> final.json
           echo "] } ] }" >> final.json
 
@@ -55,13 +52,10 @@ jobs:
           mv sing-box-*/sing-box .
           chmod +x sing-box
 
-      - name: Final Compile and Folder Prep
+      - name: Compile and Prepare
         run: |
           mkdir -p output
-          # Компилируем один основной файл
           ./sing-box rule-set compile --output output/ru-limitless.srs final.json
-          
-          # Кладём текстовые списки в папку выгрузки
           cp IPTVRUip output/
           cp iptv_only_domains.txt output/IPTVRUdomain
           cp IPTV_RULIST output/
