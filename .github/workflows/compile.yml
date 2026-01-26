@@ -21,36 +21,42 @@ jobs:
       - name: Install dependencies
         run: sudo apt-get install jq -y
 
-      - name: Process IPTV and Domains
+      - name: Process Everything
         run: |
-          # 1. Загружаем лист IPTV
+          # 1. Загружаем IPTV и базовые списки v2fly
           curl -Lo IPTV_RULIST "https://raw.githubusercontent.com/Dimonovich/TV/refs/heads/Dimonovich/FREE/TV"
-          
-          # 2. Вытаскиваем ХОСТЫ (убираем протоколы, порты и пути)
           grep -oP 'https?://\K[^/[:space:]]+' IPTV_RULIST | sed 's/:.*//' | sort -u > all_hosts.txt
-          
-          # 3. Собираем ВСЕ IP-адреса, ИСКЛЮЧАЯ 127.0.0.1
-          grep -P '^(\d{1,3}\.){3}\d{1,3}$' all_hosts.txt | grep -v '127.0.0.1' | sort -u > IPTVRUip || true
-          
-          # 4. Собираем ВСЕ домены из IPTV
-          grep -P '[a-zA-Z]' all_hosts.txt > iptv_only_domains.txt || true
+          grep -P '^(\d{1,3}\.){3}\d{1,3}$' all_hosts.txt | grep -v '127.0.0.1' > iptv_ip.txt || true
+          grep -P '[a-zA-Z]' all_hosts.txt > iptv_domains.txt || true
 
-          # 5. ЗАГРУЖАЕМ ТВОИ НОВЫЕ СПИСКИ (v2fly)
+          # Списки v2fly
           curl -L "https://raw.githubusercontent.com/v2fly/domain-list-community/refs/heads/master/data/category-ru" | grep -v '^#' | sed 's/@.*//' > v1.txt
           curl -L "https://github.com/v2fly/domain-list-community/raw/refs/heads/master/data/category-gov-ru" | grep -v '^#' | sed 's/@.*//' > v2.txt
           curl -L "https://github.com/v2fly/domain-list-community/raw/refs/heads/master/data/category-media-ru" | grep -v '^#' | sed 's/@.*//' > v3.txt
           curl -L "https://github.com/v2fly/domain-list-community/raw/refs/heads/master/data/category-retail-ru" | grep -v '^#' | sed 's/@.*//' > v4.txt
           curl -L "https://github.com/v2fly/domain-list-community/raw/refs/heads/master/data/yandex" | grep -v '^#' | sed 's/@.*//' > v5.txt
 
-          # 6. Склеиваем всё вместе
-          jq -r '.rules[0].domain[]' ru-limitless.json > manual_domains.txt
-          jq -r '.rules[0].domain_suffix[]' ru-limitless.json > manual_suffixes.txt
+          # 2. НОВЫЕ БЕЛЫЕ СПИСКИ (hxehex)
+          curl -L "https://github.com/hxehex/russia-mobile-internet-whitelist/raw/refs/heads/main/cidrwhitelist.txt" | grep -v '^#' > h_cidr.txt
+          curl -L "https://github.com/hxehex/russia-mobile-internet-whitelist/raw/refs/heads/main/ipwhitelist.txt" | grep -v '^#' > h_ip.txt
+          curl -L "https://github.com/hxehex/russia-mobile-internet-whitelist/raw/refs/heads/main/whitelist.txt" | grep -v '^#' > h_domains.txt
 
+          # 3. СОБИРАЕМ ДОМЕНЫ
+          jq -r '.rules[0].domain[]' ru-limitless.json > manual_domains.txt
+          cat manual_domains.txt iptv_domains.txt v1.txt v2.txt v3.txt v4.txt v5.txt h_domains.txt | sed 's/[[:space:]]//g' | sed '/^$/d' | sort -u > all_final_domains.txt
+
+          # 4. СОБИРАЕМ IP И ПОДСЕТИ (CIDR)
+          cat iptv_ip.txt h_ip.txt h_cidr.txt | sed 's/[[:space:]]//g' | sed '/^$/d' | sort -u > all_final_ips.txt
+
+          # 5. СОБИРАЕМ JSON (с поддержкой ip_cidr)
+          jq -r '.rules[0].domain_suffix[]' ru-limitless.json > manual_suffixes.txt
+          
           echo '{ "version": 1, "rules": [ { "domain": [' > final.json
-          # Соединяем: твои домены + IPTV домены + все 5 списков v2fly
-          cat manual_domains.txt iptv_only_domains.txt v1.txt v2.txt v3.txt v4.txt v5.txt | sed '/^$/d' | sort -u | sed 's/.*/"&"/' | paste -sd, >> final.json
+          sed 's/.*/"&"/' all_final_domains.txt | paste -sd, >> final.json
           echo '], "domain_suffix": [' >> final.json
           sed 's/.*/"&"/' manual_suffixes.txt | paste -sd, >> final.json
+          echo '], "ip_cidr": [' >> final.json
+          sed 's/.*/"&"/' all_final_ips.txt | paste -sd, >> final.json
           echo "] } ] }" >> final.json
 
       - name: Install Sing-box
@@ -60,12 +66,13 @@ jobs:
           mv sing-box-*/sing-box .
           chmod +x sing-box
 
-      - name: Final Compile and Prep
+      - name: Final Compile
         run: |
           mkdir -p output
           ./sing-box rule-set compile --output output/ru-limitless.srs final.json
-          cp IPTVRUip output/
-          cp iptv_only_domains.txt output/IPTVRUdomain
+          # Копируем чистые списки для проверки
+          cp all_final_ips.txt output/IPTVRUip
+          cp all_final_domains.txt output/IPTVRUdomain
           cp IPTV_RULIST output/
 
       - name: Update Release
@@ -73,6 +80,6 @@ jobs:
         with:
           tag_name: release-latest
           files: output/*
-          body: "Единый список: RU-зона + RU-IPTV"
+          body: "Единый список: RU-ZONA + RU-IPTV"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
