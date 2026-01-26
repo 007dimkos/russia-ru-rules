@@ -1,4 +1,4 @@
-name: Compile Sing-box Rules & IPTV
+name: Compile Unified Sing-box Rules
 
 permissions:
   contents: write
@@ -6,7 +6,7 @@ permissions:
 on:
   push:
     paths:
-      - '*.json'
+      - 'ru-limitless.json'
   workflow_dispatch:
   schedule:
     - cron: '0 0 * * 1'
@@ -18,16 +18,29 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Process IPTV List
+      - name: Process and Merge Rules
         run: |
-          # 1. Скачиваем оригинальный файл
+          # 1. Скачиваем IPTV лист и вытягиваем только домены (с буквами)
           curl -Lo IPTV_RULIST "https://raw.githubusercontent.com/Dimonovich/TV/refs/heads/Dimonovich/FREE/TV"
+          grep -oP 'https?://\K[^/:]+' IPTV_RULIST | sort -u | grep -P '[a-zA-Z]' > iptv_only_domains.txt
           
-          # 2. Извлекаем только домены (ищем строки с http и вырезаем хост)
-          grep -oP 'https?://\K[^/:]+' IPTV_RULIST | sort -u > IPTVRUdomain
-          
-          # 3. Извлекаем только IP адреса (регулярное выражение для IPv4)
-          grep -oP '(\d{1,3}\.){3}\d{1,3}' IPTV_RULIST | sort -u > IPTVRUip
+          # 2. Извлекаем IP-адреса для отдельного файла (как ты просил ранее)
+          grep -oP 'https?://\K[^/:]+' IPTV_RULIST | sort -u | grep -P '^(\d{1,3}\.){3}\d{1,3}$' > IPTVRUip
+
+          # 3. Читаем твой ручной список доменов из ru-limitless.json
+          # Используем jq для выгрузки доменов из твоего файла
+          sudo apt-get install jq -y
+          jq -r '.rules[0].domain[]' ru-limitless.json > manual_domains.txt
+          jq -r '.rules[0].domain_suffix[]' ru-limitless.json > manual_suffixes.txt
+
+          # 4. Собираем всё в один итоговый JSON
+          echo '{ "version": 1, "rules": [ { "domain": [' > final_list.json
+          # Склеиваем ручные домены и IPTV домены, добавляем кавычки и запятые
+          cat manual_domains.txt iptv_only_domains.txt | sort -u | sed 's/.*/"&"/' | paste -sd, >> final_list.json
+          echo '], "domain_suffix": [' >> final_list.json
+          # Добавляем суффиксы (.ru, .рф и т.д.)
+          sed 's/.*/"&"/' manual_suffixes.txt | paste -sd, >> final_list.json
+          echo "] } ] }" >> final_list.json
 
       - name: Install Sing-box
         run: |
@@ -36,16 +49,19 @@ jobs:
           mv sing-box-*/sing-box .
           chmod +x sing-box
 
-      - name: Compile SRS
+      - name: Compile Unified SRS
         run: |
           mkdir -p output
-          ./sing-box rule-set compile --output output/ru-limitless.srs ru-limitless.json
-          # Копируем обработанные файлы IPTV в папку для выгрузки
-          cp IPTV_RULIST output/
-          cp IPTVRUdomain output/
+          # Компилируем один общий файл
+          ./sing-box rule-set compile --output output/ru-limitless.srs final_list.json
+          
+          # Сохраняем текстовые копии для проверки
           cp IPTVRUip output/
+          # Создаем чистый список доменов (без суффиксов) для истории
+          grep -oP 'https?://\K[^/:]+' IPTV_RULIST | sort -u | grep -P '[a-zA-Z]' > output/IPTVRUdomain
+          cp IPTV_RULIST output/
 
-      - name: Upload Artifact (Release)
+      - name: Upload to Release
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
@@ -53,4 +69,4 @@ jobs:
           file_glob: true
           tag: release-latest
           overwrite: true
-          body: "Обновлено: $(date)"
+          body: "Единый список: RU-зона + IPTV домены. Обновлено: $(date +'%Y-%m-%d %H:%M')"
