@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain": [
+        "gosuslugi.ru", "esia.gosuslugi.ru", "sberbank.ru", "online.sberbank.ru",
+        "tbank.ru", "tinkoff.ru", "vtb.ru", "alfabank.ru", "pbr.ru",
+        "vk.com", "vk.ru", "ok.ru", "mail.ru", "yandex.ru", "ya.ru",
+        "dzen.ru", "rutube.ru", "mos.ru", "nalog.ru", "cbr.ru",
+        "kremlin.ru", "rzd.ru", "aeroflot.ru", "ozon.ru", "wildberries.ru",
+        "wb.ru", "avito.ru", "2gis.ru", "hh.ru", "kinopoisk.ru"
+      ],
+      "domain_suffix": [
+        ".ru",
+        ".su",
+        ".рф",
+        ".moscow",
+        ".xn--p1ai"
+      ]
+    }
+  ]
+}
