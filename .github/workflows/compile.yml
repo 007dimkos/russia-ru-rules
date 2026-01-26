@@ -1,0 +1,35 @@
+name: Compile Sing-box Rules
+on:
+  push:
+    paths:
+      - '*.json' # Запускать, когда вы меняете json файл
+  workflow_dispatch: # Кнопка ручного запуска
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Sing-box
+        run: |
+          curl -Lo sing-box.tar.gz "https://github.com/SagerNet/sing-box/releases/download/v1.10.0/sing-box-1.10.0-linux-amd64.tar.gz"
+          tar -xzf sing-box.tar.gz
+          mv sing-box-*/sing-box .
+          chmod +x sing-box
+
+      - name: Compile SRS
+        run: |
+          mkdir -p output
+          ./sing-box rule-set compile --output output/ru-limitless.srs ru-limitless.json
+
+      - name: Upload Artifact (Release)
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: output/ru-limitless.srs
+          asset_name: ru-limitless.srs
+          tag: release-latest
+          overwrite: true
+          body: "Актуальный список RU сегмента + Белый список"
