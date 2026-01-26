@@ -1,20 +1,37 @@
-name: Compile Sing-box Rules
+name: Compile Sing-box Rules & IPTV
+
+permissions:
+  contents: write
+
 on:
   push:
     paths:
-      - '*.json' # Запускать, когда вы меняете json файл
-  workflow_dispatch: # Кнопка ручного запуска
+      - '*.json'
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 1'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Process IPTV List
+        run: |
+          # 1. Скачиваем оригинальный файл
+          curl -Lo IPTV_RULIST "https://raw.githubusercontent.com/Dimonovich/TV/refs/heads/Dimonovich/FREE/TV"
+          
+          # 2. Извлекаем только домены (ищем строки с http и вырезаем хост)
+          grep -oP 'https?://\K[^/:]+' IPTV_RULIST | sort -u > IPTVRUdomain
+          
+          # 3. Извлекаем только IP адреса (регулярное выражение для IPv4)
+          grep -oP '(\d{1,3}\.){3}\d{1,3}' IPTV_RULIST | sort -u > IPTVRUip
 
       - name: Install Sing-box
         run: |
-          curl -Lo sing-box.tar.gz "https://github.com/SagerNet/sing-box/releases/download/v1.10.0/sing-box-1.10.0-linux-amd64.tar.gz"
+          curl -Lo sing-box.tar.gz "https://github.com/SagerNet/sing-box/releases/download/v1.12.17/sing-box-1.12.17-linux-amd64.tar.gz"
           tar -xzf sing-box.tar.gz
           mv sing-box-*/sing-box .
           chmod +x sing-box
@@ -23,13 +40,17 @@ jobs:
         run: |
           mkdir -p output
           ./sing-box rule-set compile --output output/ru-limitless.srs ru-limitless.json
+          # Копируем обработанные файлы IPTV в папку для выгрузки
+          cp IPTV_RULIST output/
+          cp IPTVRUdomain output/
+          cp IPTVRUip output/
 
       - name: Upload Artifact (Release)
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: output/ru-limitless.srs
-          asset_name: ru-limitless.srs
+          file: output/*
+          file_glob: true
           tag: release-latest
           overwrite: true
-          body: "Актуальный список RU сегмента + Белый список"
+          body: "Обновлено: $(date)"
