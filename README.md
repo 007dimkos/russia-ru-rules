@@ -16,7 +16,7 @@
 'rule-set:remote:https://github.com/007dimkos/russia-ru-rules/releases/download/release-latest/RUZONEcountry.srs'
 Затем установи для этого правила действие DIRECT.
 
-2. Sing-Box
+### 2. Sing-Box
 Добавьте rule_set в конфигурацию Sing-Box и правило для него:
 
 {
