@@ -10,7 +10,7 @@ on:
       - 'custom_list.txt'
   workflow_dispatch:
   schedule:
-    - cron: '0 5 * * *' # Каждый день в 5 утра
+    - cron: '0 5 * * *' # Ежедневно в 5 утра
 
 jobs:
   build:
@@ -24,37 +24,44 @@ jobs:
 
       - name: Download and Sync Lists
         run: |
-          # 1. Скачиваем свежие списки в корень репозитория
+          # 1. Скачиваем исходный плейлист IPTV (сохраняем как m3u8 в корень)
+          curl -Lo IPTV_FULL_LIST.m3u8 "https://raw.githubusercontent.com/Dimonovich/TV/refs/heads/Dimonovich/FREE/TV"
+          
+          # 2. Скачиваем остальные списки
           curl -L "https://raw.githubusercontent.com/v2fly/domain-list-community/refs/heads/master/data/yandex" -o yandex.txt
           curl -L "https://raw.githubusercontent.com/v2fly/domain-list-community/refs/heads/master/data/category-retail-ru" -o retail.txt
           curl -L "https://raw.githubusercontent.com/v2fly/domain-list-community/refs/heads/master/data/category-media-ru" -o media.txt
-          curl -L "https://raw.githubusercontent.com/hxehex/russia-mobile-internet-whitelist/refs/heads/main/whitelist.txt" -o whitelist_mobile.txt
+          curl -L "https://github.com/hxehex/russia-mobile-internet-whitelist/raw/refs/heads/main/whitelist.txt" -o whitelist_mobile.txt
           
-          # 2. Обработка IPTV
-          curl -Lo IPTV_RULIST "https://raw.githubusercontent.com/Dimonovich/TV/refs/heads/Dimonovich/FREE/TV"
-          grep -oP 'https?://\K[^/[:space:]]+' IPTV_RULIST | sed 's/:.*//' | grep -P '[a-zA-Z]' | sort -u > iptv_domains.txt
+          # 3. Извлекаем домены из IPTV для сборки
+          grep -oP 'https?://\K[^/[:space:]]+' IPTV_FULL_LIST.m3u8 | sed 's/:.*//' | grep -P '[a-zA-Z]' | sort -u > iptv_domains.txt
 
       - name: Commit Updated Lists
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add yandex.txt retail.txt media.txt whitelist_mobile.txt
-          git commit -m "Update source lists: $(date +'%d.%m.%Y')" || echo "No changes to commit"
-          git push || echo "No changes to push"
+          # Добавляем все файлы, включая исходный плейлист
+          git add yandex.txt retail.txt media.txt whitelist_mobile.txt iptv_domains.txt IPTV_FULL_LIST.m3u8
+          git commit -m "Sync source lists: $(date +'%d.%m.%Y')" || echo "No changes"
+          git push || echo "Push failed or no changes"
 
       - name: Process and Merge
         run: |
-          # 3. Чистим скачанные файлы от комментариев и атрибутов
-          sed -i '/^#/d; s/@.*//; /^$/d' yandex.txt retail.txt media.txt whitelist_mobile.txt
+          # Создаем custom_list.txt если его нет
+          touch custom_list.txt
           
-          # 4. Собираем домены из твоего ru-limitless.json
+          # Чистим временные файлы (не трогаем те, что закоммитили)
+          cp yandex.txt y.tmp && cp retail.txt r.tmp && cp media.txt m.tmp && cp whitelist_mobile.txt w.tmp
+          sed -i '/^#/d; s/@.*//; s/[[:space:]]//g; /^$/d' y.tmp r.tmp m.tmp w.tmp iptv_domains.txt custom_list.txt
+          
+          # Достаем твои суффиксы и ручные домены
           jq -r '.rules[0].domain[]' ru-limitless.json > manual_domains.txt
           jq -r '.rules[0].domain_suffix[]' ru-limitless.json > manual_suffixes.txt
 
-          # 5. Склеиваем всё (Manual + IPTV + 4 списка + Custom List)
-          cat manual_domains.txt iptv_domains.txt yandex.txt retail.txt media.txt whitelist_mobile.txt custom_list.txt | sed 's/[[:space:]]//g' | sed '/^$/d' | sort -u > all_final_domains.txt
+          # Склеиваем всё в один список
+          cat manual_domains.txt iptv_domains.txt y.tmp r.tmp m.tmp w.tmp custom_list.txt | sort -u > all_final_domains.txt
 
-          # 6. Собираем JSON (БЕЗ IP и CIDR)
+          # Собираем JSON
           echo '{ "version": 1, "rules": [ { "domain": [' > final.json
           sed 's/.*/"&"/' all_final_domains.txt | paste -sd, >> final.json
           echo '], "domain_suffix": [' >> final.json
@@ -72,14 +79,14 @@ jobs:
         run: |
           mkdir -p output
           ./sing-box rule-set compile --output output/ru-limitless.srs final.json
-          cp all_final_domains.txt output/IPTVRUdomain
-          cp IPTV_RULIST output/
+          # Сохраняем текстовый результат в релиз
+          cp all_final_domains.txt output/RU_FULL_DOMAINS.txt
 
       - name: Update Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: release-latest
           files: output/*
-          body: "Единый список: RU-ZONA + RU-IPTV. Обновлено в 5 утра."
+          body: "Автоматическая сборка. Исходники обновлены в корне."
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
