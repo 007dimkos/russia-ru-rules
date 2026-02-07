@@ -24,17 +24,15 @@ jobs:
 
       - name: Download and Sync Lists
         run: |
-          # 1. Скачиваем исходный плейлист IPTV (сохраняем как m3u8 в корень)
+          # Скачиваем IPTV
           curl -Lo IPTV_FULL_LIST.m3u8 "https://raw.githubusercontent.com/Dimonovich/TV/refs/heads/Dimonovich/FREE/TV"
-          
-          # 2. Вытаскиваем ХОСТЫ
           grep -oP 'https?://\K[^/[:space:]]+' IPTV_FULL_LIST.m3u8 | sed 's/:.*//' | sort -u > all_hosts.txt
           
-          # 3. Сохраняем IP и Домены IPTV отдельно для корня
+          # Генерируем IP и Домены IPTV для корня
           grep -P '^(\d{1,3}\.){3}\d{1,3}$' all_hosts.txt | grep -v '127.0.0.1' > iptv_ip.txt || true
           grep -P '[a-zA-Z]' all_hosts.txt > iptv_domains.txt || true
 
-          # 4. Скачиваем остальные списки (v2fly и hxehex)
+          # Скачиваем внешние списки
           curl -L "https://raw.githubusercontent.com/v2fly/domain-list-community/refs/heads/master/data/yandex" -o yandex.txt
           curl -L "https://raw.githubusercontent.com/v2fly/domain-list-community/refs/heads/master/data/category-retail-ru" -o retail.txt
           curl -L "https://raw.githubusercontent.com/v2fly/domain-list-community/refs/heads/master/data/category-media-ru" -o media.txt
@@ -44,28 +42,21 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          # Добавляем все исходники в корень репозитория
           git add yandex.txt retail.txt media.txt whitelist_mobile.txt iptv_domains.txt iptv_ip.txt IPTV_FULL_LIST.m3u8
           git commit -m "Sync source lists: $(date +'%d.%m.%Y')" || echo "No changes"
           git push || echo "No changes to push"
 
       - name: Process and Merge
         run: |
-          # Создаем кастомный лист, если его нет
           touch custom_list.txt
-          
-          # Чистим временные копии для сборки
           cp yandex.txt y.tmp && cp retail.txt r.tmp && cp media.txt m.tmp && cp whitelist_mobile.txt w.tmp
           sed -i '/^#/d; s/@.*//; s/[[:space:]]//g; /^$/d' y.tmp r.tmp m.tmp w.tmp iptv_domains.txt custom_list.txt
           
-          # Собираем данные из твоего JSON
           jq -r '.rules[0].domain[]' ru-limitless.json > manual_domains.txt
           jq -r '.rules[0].domain_suffix[]' ru-limitless.json > manual_suffixes.txt
 
-          # Склеиваем домены
           cat manual_domains.txt iptv_domains.txt y.tmp r.tmp m.tmp w.tmp custom_list.txt | sort -u > all_final_domains.txt
 
-          # Формируем JSON для Sing-box (включаем домены, суффиксы и IPTV IP)
           echo '{ "version": 1, "rules": [ { "domain": [' > final.json
           sed 's/.*/"&"/' all_final_domains.txt | paste -sd, >> final.json
           echo '], "domain_suffix": [' >> final.json
@@ -84,7 +75,6 @@ jobs:
       - name: Final Compile
         run: |
           mkdir -p output
-          # Компилируем в файл RUZONEcountry.srs
           ./sing-box rule-set compile --output output/RUZONEcountry.srs final.json
 
       - name: Update Release
@@ -93,5 +83,7 @@ jobs:
           tag_name: release-latest
           files: output/RUZONEcountry.srs
           body: "Единый скомпилированный файл RUZONEcountry.srs. Исходники обновлены в корне."
+          overwrite: true # ПЕРЕЗАПИСЫВАТЬ файлы
+          make_latest: true # Делать этот релиз самым свежим
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
