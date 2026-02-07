@@ -3,12 +3,8 @@
   "rules": [
     {
       "domain": [
-        "igroshop.com", "gosuslugi.ru", "esia.gosuslugi.ru", "sberbank.ru", "online.sberbank.ru",
-        "tbank.ru", "tinkoff.ru", "vtb.ru", "alfabank.ru", "pbr.ru",
-        "vk.com", "vk.ru", "ok.ru", "mail.ru", "yandex.ru", "ya.ru",
-        "dzen.ru", "rutube.ru", "mos.ru", "nalog.ru", "cbr.ru",
-        "kremlin.ru", "rzd.ru", "aeroflot.ru", "ozon.ru", "wildberries.ru",
-        "wb.ru", "avito.ru", "2gis.ru", "hh.ru", "kinopoisk.ru"
+        "igroshop.com",
+        "vk.com"
       ],
       "domain_suffix": [
         ".ru",
