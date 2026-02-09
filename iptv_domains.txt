@@ -356,6 +356,7 @@ s34351.cdn.ngenix.net
 s45177.cdn.ngenix.net
 s55766.cdn.ngenix.net
 s68149.cdn.ngenix.net
+s7.merlive.am
 s72169.cdn.ngenix.net
 s8.vcdn.biz
 s84942.cdn.ngenix.net
@@ -386,6 +387,7 @@ stream.uagit.tv
 stream.ztv.zp.ua
 stream0.tv41.ru
 stream01.bgu.ru
+stream8.cinerama.uz
 streamcdnb1-dd782ed59e2a4e86aabf6fc508674b59.msvdn.net
 streamer103.neterra.tv
 streaming.astrakhan.ru
