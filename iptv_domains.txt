@@ -356,7 +356,6 @@ s34351.cdn.ngenix.net
 s45177.cdn.ngenix.net
 s55766.cdn.ngenix.net
 s68149.cdn.ngenix.net
-s7.merlive.am
 s72169.cdn.ngenix.net
 s8.vcdn.biz
 s84942.cdn.ngenix.net
