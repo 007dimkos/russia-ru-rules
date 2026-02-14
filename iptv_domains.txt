@@ -390,6 +390,10 @@ stream8.cinerama.uz
 streamcdnb1-dd782ed59e2a4e86aabf6fc508674b59.msvdn.net
 streamer103.neterra.tv
 streaming.astrakhan.ru
+streaming.goodstream.cyou
+streaming.goodstream.icu
+streaming.televizor-24-tochka.ru
+streaming.thestream.cyou
 streamstak.com
 svarozhichi.cdn-04.cosmonova.net.ua
 svoetv.mediacdn.ru
@@ -397,6 +401,7 @@ svs.itworkscdn.net
 tavr.mediacdn.ru
 tavriatv.ru
 tele2dvrnat01-02.cdnvideo.ru
+televizor24tochka.ru
 tgn.bozztv.com
 tgtv.ua
 thksmom.shop
