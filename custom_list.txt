@@ -34,3 +34,5 @@ stat.okko.tv
 static.okko.tv
 upload.okko.tv
 okko.tv
+playfamily.ru
+okko.sport
