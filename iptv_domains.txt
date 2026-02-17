@@ -27,6 +27,7 @@ api-tv.ipnet.ua
 api.peers.tv
 arbiter.bolshoe.tv
 assets-imgx.fubo.tv
+assets-iptv2022.cdnvideo.ru
 assets.iptv2022.com
 assets.limehd.tv
 autopilot.catcast.tv
@@ -100,6 +101,7 @@ edge50.dc.beltelecom.by
 edge53.dc.beltelecom.by
 edge55.dc.beltelecom.by
 english-livetx.cgtn.com
+epg.iptvx.one
 epg.it999.ru
 epg.one
 eu.live.skyfolk.mk
@@ -128,6 +130,7 @@ hls.cdn.ua
 hls.mirtv.cdnvideo.ru
 hls.peers.tv
 hls127.freeott.top
+hlsarchive.iptv2022.com
 hnc-free-viewlift.amagi.tv
 hz1.teleport.cc
 i.ibb.co
@@ -200,6 +203,7 @@ m1b2.worldcast.tv
 m2b2.worldcast.tv
 matur-tv.ru
 mbit1.worldcast.tv
+mhd116.iptv2022.com
 msh0203.stream.seeweb.it
 musichls.persiana.live
 muzzik-live.morescreens.com
@@ -223,6 +227,7 @@ peqk71plnjy.a.trbcdn.net
 pic.rtbcdn.ru
 pic.rutubelist.ru
 pkvc-hls3.cdnvideo.ru
+pl.ottg.tv
 playout.fubo.tv
 playout395.livestreamingcdn.com
 pobeda.tv
@@ -376,6 +381,7 @@ sochinskayatrk.ru
 sonhls.persiana.live
 sovsekretno.tv
 sportsgrid-tribal.amagi.tv
+static-iptv2021.cdnvideo.ru
 stream.ads.ottera.tv
 stream.almaz-media.tv
 stream.e2is.in
@@ -407,6 +413,7 @@ telik.live
 tgn.bozztv.com
 tgtv.ua
 thksmom.shop
+tls-cl.cdnz.cl
 tosnotv.ru
 trk555.tv
 tv-11.ru
