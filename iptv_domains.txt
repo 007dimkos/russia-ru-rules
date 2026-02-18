@@ -85,6 +85,7 @@ dai.google.com
 dc.tbnbaltia.eu
 deluxemusic.de
 digicom.hls.iptvdc.com
+dl.dropbox.com
 dmisdracta.cdn.mgmlcdn.com
 dmithrvllta.cdn.mgmlcdn.com
 dmitnthvll.cdn.mangomolo.com
@@ -101,7 +102,6 @@ edge50.dc.beltelecom.by
 edge53.dc.beltelecom.by
 edge55.dc.beltelecom.by
 english-livetx.cgtn.com
-epg.iptvx.one
 epg.it999.ru
 epg.one
 eu.live.skyfolk.mk
@@ -130,14 +130,16 @@ hls.cdn.ua
 hls.mirtv.cdnvideo.ru
 hls.peers.tv
 hls127.freeott.top
-hlsarchive.iptv2022.com
 hnc-free-viewlift.amagi.tv
 hz1.teleport.cc
 i.ibb.co
 i.imgur.com
 i.otzovik.com
 i.postimg.cc
+i115.fastpic.org
+i120.fastpic.org
 i121.fastpic.org
+i122.fastpic.org
 i2.wp.com
 iam-profi.ru
 ikomg-kazakh.akamaized.net
@@ -203,7 +205,7 @@ m1b2.worldcast.tv
 m2b2.worldcast.tv
 matur-tv.ru
 mbit1.worldcast.tv
-mhd116.iptv2022.com
+mhd128.iptv2022.com
 msh0203.stream.seeweb.it
 musichls.persiana.live
 muzzik-live.morescreens.com
@@ -227,7 +229,6 @@ peqk71plnjy.a.trbcdn.net
 pic.rtbcdn.ru
 pic.rutubelist.ru
 pkvc-hls3.cdnvideo.ru
-pl.ottg.tv
 playout.fubo.tv
 playout395.livestreamingcdn.com
 pobeda.tv
@@ -381,7 +382,6 @@ sochinskayatrk.ru
 sonhls.persiana.live
 sovsekretno.tv
 sportsgrid-tribal.amagi.tv
-static-iptv2021.cdnvideo.ru
 stream.ads.ottera.tv
 stream.almaz-media.tv
 stream.e2is.in
@@ -413,7 +413,6 @@ telik.live
 tgn.bozztv.com
 tgtv.ua
 thksmom.shop
-tls-cl.cdnz.cl
 tosnotv.ru
 trk555.tv
 tv-11.ru
