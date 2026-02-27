@@ -223,7 +223,6 @@ ocko-live.ssl.cdn.cra.cz
 online.video.rbc.ru
 orbita.dn.ua
 osnmedia.servicecdn.ru
-ott.server-iptv.live
 ottpink.network
 pbs.twimg.com
 peqk71plnjy.a.trbcdn.net
