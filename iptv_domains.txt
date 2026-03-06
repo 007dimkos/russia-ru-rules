@@ -18,6 +18,7 @@
 5f22d76e220e1.streamlock.net
 7pal.short.gy
 a21network.ru
+a3569457567-s70378.cdn.ngenix.net
 a62dad94.wurl.com
 abr.de1se01.v2beat.live
 air.tvk6.ru
@@ -153,7 +154,6 @@ immo.date
 ingushetia.mediacdn.ru
 iptv.itv.uz
 iptv.prosto.tv
-iptv46.mcx-ix.ru
 iptvx.one
 istoki.tv
 jmp2.uk
