@@ -132,6 +132,7 @@ hls.mirtv.cdnvideo.ru
 hls.peers.tv
 hls127.freeott.top
 hnc-free-viewlift.amagi.tv
+hostrec.ru
 hz1.teleport.cc
 i.ibb.co
 i.imgur.com
@@ -144,7 +145,6 @@ i122.fastpic.org
 i2.wp.com
 iam-profi.ru
 ikomg-kazakh.akamaized.net
-images.contactout.com
 images.live.vkplay.ru
 images.live.vkvideo.ru
 img.catcast.tv
@@ -163,6 +163,7 @@ karapuztv.catcast.tv
 kb.catcast.tv
 kino-1.catcast.tv
 kino-stream.online
+kinostreammedia.hopto.org
 kinowalk.hopto.org
 kk.fluid.stream
 lastfm.freetls.fastly.net
@@ -188,6 +189,7 @@ live-tolknews.cdnvideo.ru
 live-tvkrasnodar.cdnvideo.ru
 live-ugratv.cdnvideo.ru
 live-vgtrksmotrim.cdnvideo.ru
+live.15plusmg.ru
 live.mediacdn.ru
 live.prd.dlive.tv
 live.zhanafm.kz
@@ -201,7 +203,6 @@ livetv.mylifeisgood.net.ru
 livetv.powerapp.com.tr
 logotype.download
 lotus.stingray.com
-m.media-amazon.com
 m1b2.worldcast.tv
 m2b2.worldcast.tv
 matur-tv.ru
@@ -412,7 +413,6 @@ svs.itworkscdn.net
 tavriatv.ru
 tele2dvrnat01-02.cdnvideo.ru
 televizor24tochka.ru
-telik.live
 tgn.bozztv.com
 tgtv.ua
 thksmom.shop
@@ -433,6 +433,7 @@ tvmtm.online
 tvoetv.space
 tvpnlogopeu.samsungcloud.tv
 tvpnlogopus.samsungcloud.tv
+tvzvezda.bonus-tv.ru
 uiptv.do.am
 ukr.ukrainske.tv
 universmotri.ru
