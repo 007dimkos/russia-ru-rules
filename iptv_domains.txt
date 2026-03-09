@@ -47,6 +47,7 @@ bsttv.bonus-tv.ru
 catcast.tv
 catchup.videoline.ru
 cdn-01.bonus-tv.ru
+cdn-bal.srv4you.net
 cdn-dvr.ntv.ru
 cdn-evacoder-tv.facecast.io
 cdn-st2.smotrim.ru
@@ -413,6 +414,7 @@ svs.itworkscdn.net
 tavriatv.ru
 tele2dvrnat01-02.cdnvideo.ru
 televizor24tochka.ru
+telluri.ru
 tgn.bozztv.com
 tgtv.ua
 thksmom.shop
