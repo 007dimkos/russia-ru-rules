@@ -61,6 +61,7 @@ cdn10.live-tv.cloud
 cdn10.live-tv.od.ua
 cdn2-static.ntv.ru
 cdn3.wowza.com
+cdn4.skygo.mn
 cdnlive.myspirit.tv
 chanson-video.hostingradio.ru
 company.fluid.stream
@@ -199,6 +200,7 @@ live2-orsk.cdnvideo.ru
 live2.mediacdn.ru
 live3.mediacdn.ru
 livekhabar-srt.cdnvideo.ru
+livetv-app.mylifeisgood.net.ru
 livetv.mylifeisgood.net.ru
 livetv.powerapp.com.tr
 logotype.download
