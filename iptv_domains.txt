@@ -132,7 +132,10 @@ hls-volgograd1vtv.cdnvideo.ru
 hls.cdn.ua
 hls.mirtv.cdnvideo.ru
 hls.peers.tv
+hls.stb.md
+hls1.stb.md
 hls127.freeott.top
+hls2.stb.md
 hnc-free-viewlift.amagi.tv
 hostrec.ru
 hz1.teleport.cc
