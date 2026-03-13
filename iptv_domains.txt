@@ -17,7 +17,6 @@
 5f05e059699ae.streamlock.net
 5f22d76e220e1.streamlock.net
 7pal.short.gy
-a21network.ru
 a3569457567-s70378.cdn.ngenix.net
 a62dad94.wurl.com
 abr.de1se01.v2beat.live
@@ -31,7 +30,6 @@ assets-imgx.fubo.tv
 assets-iptv2022.cdnvideo.ru
 assets.iptv2022.com
 assets.limehd.tv
-autopilot.catcast.tv
 avatars.mds.yandex.net
 barazaradio.com
 belnovosti.cdn.easyhoster.ru
@@ -64,6 +62,7 @@ cdn3.wowza.com
 cdn4.skygo.mn
 cdnlive.myspirit.tv
 chanson-video.hostingradio.ru
+cityeden.catcast.tv
 company.fluid.stream
 cp1.server89.com
 d10cyxntpn0bwm.cloudfront.net
@@ -458,6 +457,7 @@ www.1muz.com
 www.aparatchi.com
 www.archive.inform.kz
 www.cableman.ru
+www.cityeden.info
 www.coolstreaming.us
 www.cxtv.com.br
 www.dancetv.net
