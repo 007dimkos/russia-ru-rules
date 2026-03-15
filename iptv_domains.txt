@@ -250,9 +250,11 @@ ramtv.ru
 rfe-ingest.akamaized.net
 ritsatv.ru
 river-3-301.rtbcdn.ru
+river-3-3102.rtbcdn.ru
 river-3-3106.rtbcdn.ru
 river-3-316.rtbcdn.ru
 river-3-317.rtbcdn.ru
+river-3-329.rtbcdn.ru
 river-3-330.rtbcdn.ru
 river-3-336.rtbcdn.ru
 river-3-340.rtbcdn.ru
@@ -261,7 +263,6 @@ river-3-346.rtbcdn.ru
 river-3-347.rtbcdn.ru
 river-3-350.rtbcdn.ru
 river-3-351.rtbcdn.ru
-river-3-354.rtbcdn.ru
 river-3-355.rtbcdn.ru
 river-3-359.rtbcdn.ru
 river-3-362.rtbcdn.ru
@@ -279,7 +280,6 @@ river-4-407.rtbcdn.ru
 river-4-409.rtbcdn.ru
 river-4-412.rtbcdn.ru
 river-4-418.rtbcdn.ru
-river-4-420.rtbcdn.ru
 river-4-422.rtbcdn.ru
 river-4-423.rtbcdn.ru
 river-4-426.rtbcdn.ru
@@ -297,6 +297,7 @@ river-5-534.rtbcdn.ru
 river-5-535.rtbcdn.ru
 river-5-537.rtbcdn.ru
 river-5-538.rtbcdn.ru
+river-5-540.rtbcdn.ru
 river-5-542.rtbcdn.ru
 river-5-547.rtbcdn.ru
 river-5-549.rtbcdn.ru
