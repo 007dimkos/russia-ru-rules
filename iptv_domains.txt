@@ -48,7 +48,6 @@ cdn-01.bonus-tv.ru
 cdn-dvr.ntv.ru
 cdn-evacoder-tv.facecast.io
 cdn-st2.smotrim.ru
-cdn-static.ntv.ru
 cdn.1tvcrimea.ru
 cdn.kubteltv.workers.dev
 cdn.nexttvnet.ru
@@ -140,7 +139,6 @@ hostrec.ru
 hz1.teleport.cc
 i.ibb.co
 i.imgur.com
-i.otzovik.com
 i.postimg.cc
 i115.fastpic.org
 i120.fastpic.org
@@ -148,6 +146,7 @@ i121.fastpic.org
 i122.fastpic.org
 i2.wp.com
 iam-profi.ru
+igi-hls.cdnvideo.ru
 ikomg-kazakh.akamaized.net
 images.live.vkplay.ru
 images.live.vkvideo.ru
