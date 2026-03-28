@@ -36,7 +36,6 @@ belnovosti.cdn.easyhoster.ru
 bitcdn-kronehit.bitmovin.com
 bl.rutube.ru
 bl.video.matchtv.ru
-bober.ru
 bozztv.com
 brics.bonus-tv.ru
 brodilo.tv
@@ -58,7 +57,6 @@ cdn10.live-tv.cloud
 cdn10.live-tv.od.ua
 cdn2-static.ntv.ru
 cdn3.wowza.com
-cdn4.skygo.mn
 cdnlive.myspirit.tv
 chanson-video.hostingradio.ru
 cityeden.catcast.tv
@@ -233,10 +231,8 @@ pbs.twimg.com
 peqk71plnjy.a.trbcdn.net
 pic.rtbcdn.ru
 pic.rutubelist.ru
-pkvc-hls3.cdnvideo.ru
 playout.fubo.tv
 playout395.livestreamingcdn.com
-pobeda.tv
 provider-static.plex.tv
 public.apsny.camera
 public.streaming.matur-tv.ru
