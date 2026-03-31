@@ -3,7 +3,6 @@
 1840769862.rsc.cdn77.org
 1tourtv.ru
 1tvkz-stream.daitsuna.net
-1yar.tv
 30a-tv.com
 4kuhls.persiana.live
 56b50ada2d659.streamlock.net
@@ -22,13 +21,11 @@ a62dad94.wurl.com
 abr.de1se01.v2beat.live
 air.tvk6.ru
 alaniatv.ru
-almaz-media.tv
 api-tv.ipnet.ua
 api.peers.tv
 arbiter.bolshoe.tv
 assets-imgx.fubo.tv
 assets-iptv2022.cdnvideo.ru
-assets.iptv2022.com
 assets.limehd.tv
 avatars.mds.yandex.net
 barazaradio.com
@@ -242,7 +239,6 @@ ottpink.network
 pbs.twimg.com
 peqk71plnjy.a.trbcdn.net
 pic.rtbcdn.ru
-pic.rutubelist.ru
 playout.fubo.tv
 playout395.livestreamingcdn.com
 provider-static.plex.tv
@@ -253,7 +249,6 @@ qmusic.nl
 radioibiza.it
 radioshanson.ru
 radm.mediacdn.ru
-ramtv.ru
 rfe-ingest.akamaized.net
 ritsatv.ru
 river-3-3102.rtbcdn.ru
@@ -383,7 +378,6 @@ s45177.cdn.ngenix.net
 s55766.cdn.ngenix.net
 s68149.cdn.ngenix.net
 s72169.cdn.ngenix.net
-s8.vcdn.biz
 s84942.cdn.ngenix.net
 s91030.cdn.ngenix.net
 s97982.cdn.ngenix.net
@@ -439,7 +433,6 @@ streamstak.com
 svarozhichi.cdn-04.cosmonova.net.ua
 svoetv.mediacdn.ru
 svs.itworkscdn.net
-tavriatv.ru
 tele2dvrnat01-02.cdnvideo.ru
 televizor24tochka.ru
 tgn.bozztv.com
@@ -465,7 +458,6 @@ tvpnlogopus.samsungcloud.tv
 tvzvezda.bonus-tv.ru
 uiptv.do.am
 ukr.ukrainske.tv
-universmotri.ru
 upload.wikimedia.org
 v2.catcast.tv
 vcdn1.produck.company
@@ -477,17 +469,14 @@ web.onair-radio.eu
 wl.tvrain.tv
 www.1muz.com
 www.aparatchi.com
-www.archive.inform.kz
 www.cableman.ru
 www.cityeden.info
 www.coolstreaming.us
 www.cxtv.com.br
 www.dancetv.net
 www.lovefm.it
-www.ntktv.ua
 www.osnmedia.ru
 www.radio-banovina.hr
-www.rgvktv.ru
 www.rockfm.ro
 www.samru.ru
 www.shanson.tv
