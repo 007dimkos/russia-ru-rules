@@ -460,6 +460,7 @@ uiptv.do.am
 ukr.ukrainske.tv
 upload.wikimedia.org
 v2.catcast.tv
+vcdn.produck.company
 vcdn1.produck.company
 vgtrkregion-reg.cdnvideo.ru
 video.radio-banovina.hr
