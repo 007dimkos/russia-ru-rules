@@ -178,6 +178,7 @@ live-bigasia.cdnvideo.ru
 live-hls-viasat-secure-flus.cdnvideo.ru
 live-maidantv.cdnvideo.ru
 live-mirror-01.ott.tricolor.tv
+live-mirror-01.ottgoods.ru
 live-mirror-04.ott.tricolor.tv
 live-mirror-06.ott.tricolor.tv
 live-mirror-11.ott.tricolor.tv
@@ -226,6 +227,7 @@ myspirit.tv
 n1.slavmir.tv
 nadiya.home-net.com.ua
 nadiya.tv
+nea-live-mirror-01.ottgoods.ru
 nea-live-stream.ott.tricolor.tv
 ngtrk.dc.beltelecom.by
 noshls.persiana.live
@@ -395,6 +397,7 @@ stream-msk-02.ott.tricolor.tv
 stream-msk-03.ott.tricolor.tv
 stream-msk-04.ott.tricolor.tv
 stream-msk-05.ott.tricolor.tv
+stream-msk-05.ottgoods.ru
 stream-msk-06.ott.tricolor.tv
 stream-msk-07.ott.tricolor.tv
 stream-msk-08.ott.tricolor.tv
