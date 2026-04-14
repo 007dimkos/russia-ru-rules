@@ -109,6 +109,7 @@ fl1001.bozztv.com
 flussonic.mkpnet.ru
 flussonic.powernet.com.ru
 freshtv-live.ru
+fs.uplink.kz
 ftp.orbita.dn.ua
 github.com
 goodgame.ru
@@ -174,6 +175,7 @@ lime-tv.ru
 listen.powerapp.com.tr
 live-3.otcnet.ru
 live-bigasia.cdnvideo.ru
+live-hls-viasat-secure-flus.cdnvideo.ru
 live-maidantv.cdnvideo.ru
 live-mirror-01.ott.tricolor.tv
 live-mirror-01.ottgoods.ru
@@ -256,6 +258,7 @@ river-3-360.rtbcdn.ru
 river-4-403.rtbcdn.ru
 river-4-404.rtbcdn.ru
 river-4-405.rtbcdn.ru
+river-4-406.rtbcdn.ru
 river-4-407.rtbcdn.ru
 river-4-409.rtbcdn.ru
 river-4-412.rtbcdn.ru
@@ -268,7 +271,6 @@ river-4-421.rtbcdn.ru
 river-4-422.rtbcdn.ru
 river-4-423.rtbcdn.ru
 river-4-426.rtbcdn.ru
-river-4-428.rtbcdn.ru
 river-4-429.rtbcdn.ru
 river-4-430.rtbcdn.ru
 river-4-432.rtbcdn.ru
@@ -279,6 +281,8 @@ river-4-438.rtbcdn.ru
 river-4-439.rtbcdn.ru
 river-4-440.rtbcdn.ru
 river-4-443.rtbcdn.ru
+river-4-444.rtbcdn.ru
+river-4-445.rtbcdn.ru
 river-4-451.rtbcdn.ru
 river-4-453.rtbcdn.ru
 river-4-454.rtbcdn.ru
@@ -286,15 +290,14 @@ river-4-455.rtbcdn.ru
 river-4-456.rtbcdn.ru
 river-4-457.rtbcdn.ru
 river-5-512.rtbcdn.ru
-river-5-513.rtbcdn.ru
 river-5-514.rtbcdn.ru
 river-5-517.rtbcdn.ru
 river-5-523.rtbcdn.ru
+river-5-534.rtbcdn.ru
 river-5-535.rtbcdn.ru
 river-5-536.rtbcdn.ru
 river-5-537.rtbcdn.ru
 river-5-538.rtbcdn.ru
-river-5-554.rtbcdn.ru
 river-5-558.rtbcdn.ru
 rt-ct-belg-htlive.cdn.ngenix.net
 rt-ct-bryansk-htlive.cdn.ngenix.net
