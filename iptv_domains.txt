@@ -1,3 +1,4 @@
+100.free-iptvchannel.workers.dev
 12channel.bonus-tv.ru
 136723.edgevideo.ru
 1tourtv.ru
@@ -94,6 +95,7 @@ epg.it999.ru
 epg.one
 eu.live.skyfolk.mk
 euroindiemusic.info
+ext.cdn.nashnet.tv
 fe-sib.svc.iptv.rt.ru
 fe-sth.svc.iptv.rt.ru
 fe-ural.svc.iptv.rt.ru
