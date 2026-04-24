@@ -62,10 +62,7 @@ d18gddrg3q1rlq.cloudfront.net
 d198ro05q94rc4.cloudfront.net
 d1n314cytqn9r3.cloudfront.net
 d1xc25jm9e0l4b.cloudfront.net
-d27toxk63drks3.cloudfront.net
 d284aawtm5vi48.cloudfront.net
-d2esizdt2xkmhp.cloudfront.net
-d2kil4r771hni8.cloudfront.net
 d2tcgvmxn0otsl.cloudfront.net
 d3a9vrmy2tps6h.cloudfront.net
 d3bsgqzbpkrvbb.cloudfront.net
@@ -425,7 +422,6 @@ www.aparatchi.com
 www.cableman.ru
 www.cityeden.info
 www.coolstreaming.us
-www.cxtv.com.br
 www.dancetv.net
 www.lovefm.it
 www.osnmedia.ru
