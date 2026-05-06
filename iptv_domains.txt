@@ -75,7 +75,6 @@ deluxemusic.de
 digicom.hls.iptvdc.com
 dl.dropbox.com
 dt1s4l2cmiyit.cloudfront.net
-dtv.vol.net.ua
 dvb.by
 dvnftgdlbnemm.cloudfront.net
 e10-ll.facecast.net
