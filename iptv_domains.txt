@@ -225,6 +225,8 @@ radioshanson.ru
 radm.mediacdn.ru
 rfe-ingest.akamaized.net
 river-3-314.rtbcdn.ru
+river-3-348.rtbcdn.ru
+river-3-360.rtbcdn.ru
 river-4-403.rtbcdn.ru
 river-4-404.rtbcdn.ru
 river-4-405.rtbcdn.ru
@@ -240,7 +242,6 @@ river-4-420.rtbcdn.ru
 river-4-421.rtbcdn.ru
 river-4-422.rtbcdn.ru
 river-4-423.rtbcdn.ru
-river-4-426.rtbcdn.ru
 river-4-429.rtbcdn.ru
 river-4-430.rtbcdn.ru
 river-4-432.rtbcdn.ru
@@ -261,9 +262,11 @@ river-4-456.rtbcdn.ru
 river-4-457.rtbcdn.ru
 river-4-461.rtbcdn.ru
 river-4-462.rtbcdn.ru
+river-4-464.rtbcdn.ru
 river-4-465.rtbcdn.ru
 river-4-467.rtbcdn.ru
 river-4-472.rtbcdn.ru
+river-4-473.rtbcdn.ru
 rt-ct-belg-htlive.cdn.ngenix.net
 rt-ct-bryansk-htlive.cdn.ngenix.net
 rt-ct-ivan-htlive.cdn.ngenix.net
