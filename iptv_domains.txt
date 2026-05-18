@@ -184,7 +184,6 @@ live2.mediacdn.ru
 live20.bozztv.com
 live3.mediacdn.ru
 livekhabar-srt.cdnvideo.ru
-livetv-app.mylifeisgood.net.ru
 livetv.mylifeisgood.net.ru
 livetv.powerapp.com.tr
 logotype.download
@@ -355,7 +354,6 @@ sitv.ru
 sonhls.persiana.live
 sovsekretno.tv
 sportsgrid-tribal.amagi.tv
-str-01.sunset-media.org
 stream.ads.ottera.tv
 stream.almaz-media.tv
 stream.e2is.in
