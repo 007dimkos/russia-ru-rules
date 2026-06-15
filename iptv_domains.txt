@@ -161,6 +161,7 @@ lime-tv.ru
 listen.powerapp.com.tr
 live-3.otcnet.ru
 live-bigasia.cdnvideo.ru
+live-hls-viasat-secure-flus.cdnvideo.ru
 live-maidantv.cdnvideo.ru
 live-mordovia24.cdnvideo.ru
 live-nikatv.cdnvideo.ru
