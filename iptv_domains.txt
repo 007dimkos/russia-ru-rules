@@ -22,7 +22,6 @@ api-tv.ipnet.ua
 api.peers.tv
 arbiter.bolshoe.tv
 assets-imgx.fubo.tv
-assets-iptv2022.cdnvideo.ru
 avatars.mds.yandex.net
 barazaradio.com
 belnovosti.cdn.easyhoster.ru
@@ -71,7 +70,6 @@ dagestan.mediacdn.ru
 dc.tbnbaltia.eu
 deluxemusic.de
 digicom.hls.iptvdc.com
-dl.dropbox.com
 dt1s4l2cmiyit.cloudfront.net
 dvb.by
 dvnftgdlbnemm.cloudfront.net
@@ -83,7 +81,6 @@ edge50.dc.beltelecom.by
 edge53.dc.beltelecom.by
 edge55.dc.beltelecom.by
 english-livetx.cgtn.com
-epg.iptvx.one
 epg.it999.ru
 epg.one
 eu.live.skyfolk.mk
@@ -122,10 +119,6 @@ hz1.teleport.cc
 i.ibb.co
 i.imgur.com
 i.postimg.cc
-i115.fastpic.org
-i120.fastpic.org
-i121.fastpic.org
-i122.fastpic.org
 i2.wp.com
 iam-profi.ru
 igi-hls.cdnvideo.ru
@@ -190,7 +183,6 @@ m1b2.worldcast.tv
 m2b2.worldcast.tv
 matur-tv.ru
 mbit1.worldcast.tv
-mhd128.iptv2022.com
 msh0203.stream.seeweb.it
 musichls.persiana.live
 muzzik-live.morescreens.com
