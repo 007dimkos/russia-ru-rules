@@ -145,6 +145,7 @@ kinostreammedia.hopto.org
 kinowalk.hopto.org
 kk.fluid.stream
 lastfm.freetls.fastly.net
+lbgo.bozztv.com
 lh3.googleusercontent.com
 lightning-now70s-samsungnz.amagi.tv
 lightning-now80s-samsungnz.amagi.tv
@@ -172,7 +173,6 @@ live1.1tvcrimea.ru
 live2-aisttv.cdnvideo.ru
 live2-orsk.cdnvideo.ru
 live2.mediacdn.ru
-live20.bozztv.com
 live3.mediacdn.ru
 livekhabar-srt.cdnvideo.ru
 livetv.mylifeisgood.net.ru
@@ -387,6 +387,7 @@ tvzvezda.bonus-tv.ru
 uiptv.do.am
 ukr.ukrainske.tv
 upload.wikimedia.org
+ushba.tv
 v2.catcast.tv
 vcdn.produck.company
 vcdn1.produck.company
