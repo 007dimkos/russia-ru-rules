@@ -4,8 +4,7 @@
     {
       "domain": [
         "igroshop.com",
-        "vk.com",
-        "ru.vk.store"
+        "vk.com"
       ],
       "domain_suffix": [
         ".ru",
@@ -24,7 +23,8 @@
         ".lenta.tech",
         ".uni.rest",
         ".unirest.tech",
-        ".yandex.ru"
+        ".yandex.ru",
+        ".ru.vk.store"
       ]
     }
   ]
