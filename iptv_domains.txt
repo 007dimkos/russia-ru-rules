@@ -141,6 +141,8 @@ karapuztv.catcast.tv
 kb.catcast.tv
 kharkov-z.ru
 kino-1.catcast.tv
+kinostream3-premiera-1.hf.space
+kinostream3-premiera-2.hf.space
 kinostreammedia.hopto.org
 kinowalk.hopto.org
 kk.fluid.stream
@@ -182,6 +184,8 @@ m1b2.worldcast.tv
 m2b2.worldcast.tv
 matur-tv.ru
 mbit1.worldcast.tv
+mbmh5s36ok.a.trbcdn.net
+mhd116.iptv2022.com
 msh0203.stream.seeweb.it
 musichls.persiana.live
 muzzik-live.morescreens.com
@@ -413,3 +417,4 @@ www.vuemmetv.it
 wz-kt.ktk.kz
 yaroslavl.mediacdn.ru
 zabava-htlive.cdn.ngenix.net
+zvukoff.usite.pro
