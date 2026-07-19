@@ -218,6 +218,7 @@ radioibiza.it
 radioshanson.ru
 radm.mediacdn.ru
 rfe-ingest.akamaized.net
+river-3-330.rtbcdn.ru
 river-3-348.rtbcdn.ru
 river-3-351.rtbcdn.ru
 river-3-360.rtbcdn.ru
