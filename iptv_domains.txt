@@ -210,6 +210,7 @@ peqk71plnjy.a.trbcdn.net
 pic.rtbcdn.ru
 playout.fubo.tv
 playout395.livestreamingcdn.com
+playxapp.play-x.app
 provider-static.plex.tv
 public.apsny.camera
 public.streaming.matur-tv.ru
@@ -338,6 +339,7 @@ sitv.ru
 sonhls.persiana.live
 sovsekretno.tv
 sportsgrid-tribal.amagi.tv
+starcius-cinema.com
 stream.ads.ottera.tv
 stream.almaz-media.tv
 stream.e2is.in
