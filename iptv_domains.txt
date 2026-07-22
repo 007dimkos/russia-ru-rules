@@ -141,8 +141,6 @@ karapuztv.catcast.tv
 kb.catcast.tv
 kharkov-z.ru
 kino-1.catcast.tv
-kinostream3-premiera-1.hf.space
-kinostream3-premiera-2.hf.space
 kinostreammedia.hopto.org
 kinowalk.hopto.org
 kk.fluid.stream
@@ -417,4 +415,3 @@ www.vuemmetv.it
 wz-kt.ktk.kz
 yaroslavl.mediacdn.ru
 zabava-htlive.cdn.ngenix.net
-zvukoff.usite.pro
