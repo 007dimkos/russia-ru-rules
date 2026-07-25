@@ -208,7 +208,6 @@ peqk71plnjy.a.trbcdn.net
 pic.rtbcdn.ru
 playout.fubo.tv
 playout395.livestreamingcdn.com
-playxapp.play-x.app
 provider-static.plex.tv
 public.apsny.camera
 public.streaming.matur-tv.ru
@@ -217,11 +216,6 @@ radioibiza.it
 radioshanson.ru
 radm.mediacdn.ru
 rfe-ingest.akamaized.net
-river-3-330.rtbcdn.ru
-river-3-348.rtbcdn.ru
-river-3-351.rtbcdn.ru
-river-3-360.rtbcdn.ru
-river-3-362.rtbcdn.ru
 river-4-404.rtbcdn.ru
 river-4-405.rtbcdn.ru
 river-4-406.rtbcdn.ru
@@ -233,9 +227,7 @@ river-4-413.rtbcdn.ru
 river-4-419.rtbcdn.ru
 river-4-421.rtbcdn.ru
 river-4-422.rtbcdn.ru
-river-4-423.rtbcdn.ru
 river-4-429.rtbcdn.ru
-river-4-432.rtbcdn.ru
 river-4-434.rtbcdn.ru
 river-4-435.rtbcdn.ru
 river-4-437.rtbcdn.ru
@@ -256,6 +248,9 @@ river-4-472.rtbcdn.ru
 river-4-474.rtbcdn.ru
 river-4-476.rtbcdn.ru
 river-4-484.rtbcdn.ru
+river-ntv-ihome-d485.rtbcdn.ru
+river-ntv-ihome-d486.rtbcdn.ru
+river-ntv-ihome-d487.rtbcdn.ru
 rt-ct-belg-htlive.cdn.ngenix.net
 rt-ct-bryansk-htlive.cdn.ngenix.net
 rt-ct-ivan-htlive.cdn.ngenix.net
