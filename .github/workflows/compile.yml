@@ -19,24 +19,29 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Setup Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
       - name: Install dependencies
         run: sudo apt-get install jq -y
 
       - name: Download and Sync Lists
         run: |
-          # Скачиваем IPTV
-          curl -Lo IPTV_FULL_LIST.m3u8 "https://raw.githubusercontent.com/Dimonovich/TV/refs/heads/Dimonovich/FREE/TV"
-          grep -oP 'https?://\K[^/[:space:]]+' IPTV_FULL_LIST.m3u8 | sed 's/:.*//' | sort -u > all_hosts.txt
+          # Скачиваем IPTV с проверкой HTTP-статуса
+          curl -fsSL --retry 3 "https://raw.githubusercontent.com/Dimonovich/TV/refs/heads/Dimonovich/FREE/TV" -o IPTV_FULL_LIST.m3u8 || echo "" > IPTV_FULL_LIST.m3u8
+          grep -oP 'https?://\K[^/[:space:]]+' IPTV_FULL_LIST.m3u8 | sed 's/:.*//' | sort -u > all_hosts.txt || true
           
           # Генерируем IP и Домены IPTV для корня
           grep -P '^(\d{1,3}\.){3}\d{1,3}$' all_hosts.txt | grep -v '127.0.0.1' > iptv_ip.txt || true
           grep -P '[a-zA-Z]' all_hosts.txt > iptv_domains.txt || true
 
           # Скачиваем внешние списки
-          curl -L "https://raw.githubusercontent.com/v2fly/domain-list-community/refs/heads/master/data/yandex" -o yandex.txt
-          curl -L "https://raw.githubusercontent.com/v2fly/domain-list-community/refs/heads/master/data/category-retail-ru" -o retail.txt
-          curl -L "https://raw.githubusercontent.com/v2fly/domain-list-community/refs/heads/master/data/category-media-ru" -o media.txt
-          curl -L "https://github.com/hxehex/russia-mobile-internet-whitelist/raw/refs/heads/main/whitelist.txt" -o whitelist_mobile.txt
+          curl -fsSL --retry 3 "https://raw.githubusercontent.com/v2fly/domain-list-community/refs/heads/master/data/yandex" -o yandex.txt || echo "" > yandex.txt
+          curl -fsSL --retry 3 "https://raw.githubusercontent.com/v2fly/domain-list-community/refs/heads/master/data/category-retail-ru" -o retail.txt || echo "" > retail.txt
+          curl -fsSL --retry 3 "https://raw.githubusercontent.com/v2fly/domain-list-community/refs/heads/master/data/category-media-ru" -o media.txt || echo "" > media.txt
+          curl -fsSL --retry 3 "https://github.com/hxehex/russia-mobile-internet-whitelist/raw/refs/heads/main/whitelist.txt" -o whitelist_mobile.txt || echo "" > whitelist_mobile.txt
 
       - name: Commit Updated Lists
         run: |
@@ -52,22 +57,30 @@ jobs:
           cp yandex.txt y.tmp && cp retail.txt r.tmp && cp media.txt m.tmp && cp whitelist_mobile.txt w.tmp
           sed -i '/^#/d; s/@.*//; s/[[:space:]]//g; /^$/d' y.tmp r.tmp m.tmp w.tmp iptv_domains.txt custom_list.txt
           
-          jq -r '.rules[0].domain[]' ru-limitless.json > manual_domains.txt
-          jq -r '.rules[0].domain_suffix[]' ru-limitless.json > manual_suffixes.txt
+          jq -r '.rules[0].domain[] // empty' ru-limitless.json > manual_domains.txt
+          jq -r '.rules[0].domain_suffix[] // empty' ru-limitless.json > manual_suffixes.txt
 
-          cat manual_domains.txt iptv_domains.txt y.tmp r.tmp m.tmp w.tmp custom_list.txt | sort -u > all_final_domains.txt
+          cat manual_domains.txt iptv_domains.txt y.tmp r.tmp m.tmp w.tmp custom_list.txt | sort -u | grep -v '^$' > all_final_domains.txt
 
-          echo '{ "version": 1, "rules": [ { "domain": [' > final.json
-          sed 's/.*/"&"/' all_final_domains.txt | paste -sd, >> final.json
-          echo '], "domain_suffix": [' >> final.json
-          sed 's/.*/"&"/' manual_suffixes.txt | paste -sd, >> final.json
-          echo '], "ip_cidr": [' >> final.json
-          sed 's/.*/"&"/' iptv_ip.txt | paste -sd, >> final.json
-          echo "] } ] }" >> final.json
+          # Безопасная сборка JSON через jq
+          jq -n \
+            --rawfile domains all_final_domains.txt \
+            --rawfile suffixes manual_suffixes.txt \
+            --rawfile ips iptv_ip.txt \
+            '{
+              version: 1,
+              rules: [
+                {
+                  domain: ($domains | split("\n") | map(select(length > 0))),
+                  domain_suffix: ($suffixes | split("\n") | map(select(length > 0))),
+                  ip_cidr: ($ips | split("\n") | map(select(length > 0)))
+                }
+              ]
+            }' > final.json
 
       - name: Install Sing-box
         run: |
-          curl -Lo sing-box.tar.gz "https://github.com/SagerNet/sing-box/releases/download/v1.12.17/sing-box-1.12.17-linux-amd64.tar.gz"
+          curl -fsSL --retry 3 "https://github.com/SagerNet/sing-box/releases/download/v1.12.17/sing-box-1.12.17-linux-amd64.tar.gz" -o sing-box.tar.gz
           tar -xzf sing-box.tar.gz
           mv sing-box-*/sing-box .
           chmod +x sing-box
@@ -83,7 +96,7 @@ jobs:
           tag_name: release-latest
           files: output/RUZONEcountry.srs
           body: "Единый скомпилированный файл RUZONEcountry.srs. Исходники обновлены в корне."
-          overwrite: true # ПЕРЕЗАПИСЫВАТЬ файлы
-          make_latest: true # Делать этот релиз самым свежим
+          overwrite: true
+          make_latest: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
