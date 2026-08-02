@@ -93,12 +93,11 @@ jobs:
           ./sing-box rule-set compile --output output/RUZONEcountry.srs final.json
 
       - name: Update Release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: release-latest
-          files: output/RUZONEcountry.srs
-          body: "Единый скомпилированный файл RUZONEcountry.srs. Исходники обновлены в корне."
-          overwrite_files: true
-          make_latest: true
+        run: |
+          gh release create release-latest output/RUZONEcountry.srs \
+            --notes "Единый скомпилированный файл RUZONEcountry.srs. Исходники обновлены в корне." \
+            --clobber \
+            --latest || \
+          gh release upload release-latest output/RUZONEcountry.srs --clobber
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
