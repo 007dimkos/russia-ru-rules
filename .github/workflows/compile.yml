@@ -98,7 +98,7 @@ jobs:
           tag_name: release-latest
           files: output/RUZONEcountry.srs
           body: "Единый скомпилированный файл RUZONEcountry.srs. Исходники обновлены в корне."
-          overwrite: true
+          overwrite_files: true
           make_latest: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
