@@ -19,21 +19,16 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js 24
-        uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-
       - name: Install dependencies
         run: sudo apt-get install jq -y
 
       - name: Download and Sync Lists
         run: |
-          # Скачиваем IPTV с проверкой HTTP-статуса
+          # Скачиваем IPTV
           curl -fsSL --retry 3 "https://raw.githubusercontent.com/Dimonovich/TV/refs/heads/Dimonovich/FREE/TV" -o IPTV_FULL_LIST.m3u8 || echo "" > IPTV_FULL_LIST.m3u8
-          grep -oP 'https?://\K[^/[:space:]]+' IPTV_FULL_LIST.m3u8 | sed 's/:.*//' | sort -u > all_hosts.txt || true
+          grep -oP 'https?://\K[^/[:space:]]+' IPTV_FULL_LIST.m3u8 | sed 's/:.*//' | tr -d '\r' | sort -u > all_hosts.txt || true
           
-          # Генерируем IP и Домены IPTV для корня
+          # Генерируем IP и Домены IPTV
           grep -P '^(\d{1,3}\.){3}\d{1,3}$' all_hosts.txt | grep -v '127.0.0.1' > iptv_ip.txt || true
           grep -P '[a-zA-Z]' all_hosts.txt > iptv_domains.txt || true
 
@@ -54,19 +49,26 @@ jobs:
       - name: Process and Merge
         run: |
           touch custom_list.txt
-          cp yandex.txt y.tmp && cp retail.txt r.tmp && cp media.txt m.tmp && cp whitelist_mobile.txt w.tmp
-          sed -i '/^#/d; s/@.*//; s/[[:space:]]//g; /^$/d' y.tmp r.tmp m.tmp w.tmp iptv_domains.txt custom_list.txt
-          
-          jq -r '.rules[0].domain[] // empty' ru-limitless.json > manual_domains.txt
-          jq -r '.rules[0].domain_suffix[] // empty' ru-limitless.json > manual_suffixes.txt
 
-          cat manual_domains.txt iptv_domains.txt y.tmp r.tmp m.tmp w.tmp custom_list.txt | sort -u | grep -v '^$' > all_final_domains.txt
+          # Очистка v2fly префиксов (full:, regexp:, include:), атрибутов (@) и Windows-переносов \r
+          cat yandex.txt retail.txt media.txt whitelist_mobile.txt iptv_domains.txt custom_list.txt | \
+            tr -d '\r' | \
+            sed -E '/^#/d; s/@.*//; s/^(full|regexp|keyword|include)://; s/[[:space:]]//g; /^$/d' | \
+            sort -u > downloaded_domains.txt
 
-          # Безопасная сборка JSON через jq
+          # Вытаскиваем домены из ru-limitless.json с зачисткой \r
+          jq -r '.rules[0].domain[]? // empty' ru-limitless.json | tr -d '\r' > manual_domains.txt
+          jq -r '.rules[0].domain_suffix[]? // empty' ru-limitless.json | tr -d '\r' > manual_suffixes.txt
+          tr -d '\r' < iptv_ip.txt > clean_ip.txt
+
+          # Объединяем домены
+          cat manual_domains.txt downloaded_domains.txt | sort -u | grep -v '^$' > all_final_domains.txt
+
+          # Сборка строго валидного JSON без пустот и переносов
           jq -n \
             --rawfile domains all_final_domains.txt \
             --rawfile suffixes manual_suffixes.txt \
-            --rawfile ips iptv_ip.txt \
+            --rawfile ips clean_ip.txt \
             '{
               version: 1,
               rules: [
