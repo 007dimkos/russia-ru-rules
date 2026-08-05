@@ -348,7 +348,6 @@ sevas.1tvcrimea.ru
 sezon.tv
 simf.1tvcrimea.ru
 sitv.ru
-smotrim.org
 sonhls.persiana.live
 sovsekretno.tv
 sportsgrid-tribal.amagi.tv
@@ -368,7 +367,6 @@ stream0.tv41.ru
 stream01.bgu.ru
 stream8.cinerama.uz
 streamcdnb1-dd782ed59e2a4e86aabf6fc508674b59.msvdn.net
-streamer.enchart.one
 streamer103.neterra.tv
 streaming.astrakhan.ru
 streaming.goodstream.cyou
@@ -385,7 +383,6 @@ tinyurl.com
 tosnotv.ru
 trk555.tv
 tsv.md
-ttvrun.one
 tv.a21network.ru
 tv.broadcasting.ro
 tv.cdn.xsg.ge
