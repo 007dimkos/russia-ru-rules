@@ -90,6 +90,7 @@ fe-sib.svc.iptv.rt.ru
 fe-sth.svc.iptv.rt.ru
 fe-ural.svc.iptv.rt.ru
 fe-vlg.svc.iptv.rt.ru
+files.w.tv
 flussonic.mkpnet.ru
 flussonic.powernet.com.ru
 freshtv-live.ru
@@ -140,7 +141,6 @@ karapuztv.catcast.tv
 kb.catcast.tv
 kharkov-z.ru
 kino-1.catcast.tv
-kinostreammedia.hopto.org
 kinowalk.hopto.org
 kk.fluid.stream
 lastfm.freetls.fastly.net
@@ -329,6 +329,7 @@ rt-vlg-srnk-htlive.cdn.ngenix.net
 rt-vlg-ul-htlive.cdn.ngenix.net
 rt-vlg-yola-htlive.cdn.ngenix.net
 rtpmedia-pull-hls.cdnvideo.ru
+s10.iimage.su
 s14131.cdn.ngenix.net
 s14553.cdn.ngenix.net
 s20441.cdn.ngenix.net
