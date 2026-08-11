@@ -19,7 +19,6 @@ abr.de1se01.v2beat.live
 air.tvk6.ru
 alaniatv.ru
 api-tv.ipnet.ua
-api.peers.tv
 arbiter.bolshoe.tv
 assets-imgx.fubo.tv
 avatars.mds.yandex.net
@@ -92,6 +91,7 @@ fe-ural.svc.iptv.rt.ru
 fe-vlg.svc.iptv.rt.ru
 files.kick.com
 files.w.tv
+fl.ralsei.site
 flussonic.mkpnet.ru
 flussonic.powernet.com.ru
 freshtv-live.ru
@@ -113,7 +113,6 @@ hls-tvsoyuz.cdnvideo.ru
 hls-volgograd1vtv.cdnvideo.ru
 hls.cdn.ua
 hls.mirtv.cdnvideo.ru
-hls.peers.tv
 hls.stb.md
 hls1.stb.md
 hls127.freeott.top
