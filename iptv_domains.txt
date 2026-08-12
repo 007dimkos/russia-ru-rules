@@ -171,6 +171,7 @@ live-tolknews.cdnvideo.ru
 live-tvkrasnodar.cdnvideo.ru
 live-ugratv.cdnvideo.ru
 live-vgtrksmotrim.cdnvideo.ru
+live.kharkov-z.ru
 live.mediacdn.ru
 live.zhanafm.kz
 live1.1tvcrimea.ru
