@@ -74,7 +74,6 @@ dvb.by
 dvnftgdlbnemm.cloudfront.net
 e10-ll.facecast.net
 eco.streams.ovh
-edge-tv-ll.facecast.io
 edge4.1internet.tv
 edge50.dc.beltelecom.by
 edge53.dc.beltelecom.by
@@ -144,7 +143,6 @@ just-tv.lt
 k3.usastreams.com
 karapuztv.catcast.tv
 kb.catcast.tv
-kharkov-z.ru
 kino-1.catcast.tv
 kino-stream.online
 kinowalk.hopto.org
@@ -169,7 +167,6 @@ live-saha.cdnvideo.ru
 live-sovsec-ref.cdnvideo.ru
 live-tolknews.cdnvideo.ru
 live-tvkrasnodar.cdnvideo.ru
-live-ugratv.cdnvideo.ru
 live-vgtrksmotrim.cdnvideo.ru
 live.kharkov-z.ru
 live.mediacdn.ru
@@ -196,8 +193,6 @@ muzzik-live.morescreens.com
 myradio24.org
 myspirit.tv
 n1.slavmir.tv
-nadiya.home-net.com.ua
-nadiya.tv
 ncdn.telewebion.ir
 ngtrk.dc.beltelecom.by
 noshls.persiana.live
@@ -221,7 +216,7 @@ qazaqstantv-stream.qazcdn.com
 radioibiza.it
 radioshanson.ru
 radm.mediacdn.ru
-rfe-ingest.akamaized.net
+rferl-ingest.akamaized.net
 river-3-312.rtbcdn.ru
 river-4-404.rtbcdn.ru
 river-4-405.rtbcdn.ru
@@ -431,6 +426,7 @@ www.cableman.ru
 www.cityeden.info
 www.coolstreaming.us
 www.dancetv.net
+www.kharkov-z.ru
 www.lovefm.it
 www.osnmedia.ru
 www.radio-banovina.hr
