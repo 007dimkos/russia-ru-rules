@@ -381,7 +381,6 @@ streaming.goodstream.icu
 streaming.televizor-24-tochka.ru
 streaming.thestream.cyou
 sun9-36.userapi.com
-svarozhichi.cdn-04.cosmonova.net.ua
 svoetv.mediacdn.ru
 tele2dvrnat01-02.cdnvideo.ru
 televizor24tochka.ru
