@@ -372,6 +372,7 @@ stream.trafjam.ru
 stream.ztv.zp.ua
 stream0.tv41.ru
 stream01.bgu.ru
+stream3.cinerama.uz
 stream8.cinerama.uz
 streamcdnb1-dd782ed59e2a4e86aabf6fc508674b59.msvdn.net
 streamer103.neterra.tv
