@@ -69,6 +69,7 @@ dc.tbnbaltia.eu
 deluxemusic.de
 digicom.hls.iptvdc.com
 dt1s4l2cmiyit.cloudfront.net
+dtv.vol.net.ua
 dvb.by
 dvnftgdlbnemm.cloudfront.net
 e10-ll.facecast.net
@@ -156,6 +157,7 @@ lime-tv.ru
 listen.powerapp.com.tr
 live-3.otcnet.ru
 live-bigasia.cdnvideo.ru
+live-gtrk.smotrim.ru
 live-hls-viasat-secure-flus.cdnvideo.ru
 live-maidantv.cdnvideo.ru
 live-mordovia24.cdnvideo.ru
@@ -169,6 +171,7 @@ live-tvkrasnodar.cdnvideo.ru
 live-vgtrksmotrim.cdnvideo.ru
 live.kharkov-z.ru
 live.mediacdn.ru
+live.smotrim.ru
 live.zhanafm.kz
 live1.1tvcrimea.ru
 live2-aisttv.cdnvideo.ru
