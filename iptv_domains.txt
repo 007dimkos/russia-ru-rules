@@ -404,7 +404,6 @@ ushba.tv
 v2.catcast.tv
 vcdn.produck.company
 vcdn1.produck.company
-vgtrkregion-reg.cdnvideo.ru
 video.radio-banovina.hr
 vipotv.com
 vod.tuva.ru
