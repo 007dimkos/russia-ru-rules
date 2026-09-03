@@ -90,7 +90,6 @@ fe-ural.svc.iptv.rt.ru
 fe-vlg.svc.iptv.rt.ru
 files.kick.com
 files.w.tv
-fl.ralsei.site
 flussonic.mkpnet.ru
 flussonic.powernet.com.ru
 freshtv-live.ru
@@ -129,6 +128,7 @@ ikomg-kazakh.akamaized.net
 images.contactout.com
 images.live.vkplay.ru
 images.live.vkvideo.ru
+images.sr.roku.com
 img.catcast.tv
 img.prosto.tv
 img15.lostpic.net
@@ -211,7 +211,6 @@ peqk71plnjy.a.trbcdn.net
 pic.rtbcdn.ru
 playout.fubo.tv
 playout395.livestreamingcdn.com
-provider-static.plex.tv
 public.apsny.camera
 public.streaming.matur-tv.ru
 qazaqstantv-stream.qazcdn.com
