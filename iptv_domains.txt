@@ -40,6 +40,7 @@ cdn-evacoder-tv.facecast.io
 cdn.1tvcrimea.ru
 cdn.ntv.ru
 cdn.powergroup.com.tr
+cdn.rostelekom-tv.xyz
 cdn.universmotri.ru
 cdn10.live-tv.cloud
 cdn10.live-tv.od.ua
@@ -264,6 +265,7 @@ river-4-484.rtbcdn.ru
 river-ntv-ihome-d485.rtbcdn.ru
 river-ntv-ihome-d486.rtbcdn.ru
 river-ntv-ihome-d487.rtbcdn.ru
+rostelekom-tv.xyz
 rt-ct-belg-htlive.cdn.ngenix.net
 rt-ct-bryansk-htlive.cdn.ngenix.net
 rt-ct-ivan-htlive.cdn.ngenix.net
