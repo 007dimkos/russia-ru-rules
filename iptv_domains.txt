@@ -23,7 +23,6 @@ assets-imgx.fubo.tv
 avatars.mds.yandex.net
 barazaradio.com
 belnovosti.cdn.easyhoster.ru
-betkinglive.online
 bitcdn-kronehit.bitmovin.com
 bl.rutube.ru
 bl.video.matchtv.ru
