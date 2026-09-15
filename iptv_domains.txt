@@ -113,7 +113,6 @@ hls.cdn.ua
 hls.mirtv.cdnvideo.ru
 hls.stb.md
 hls1.stb.md
-hls127.freeott.top
 hnc-free-viewlift.amagi.tv
 hostrec.ru
 hz1.teleport.cc
@@ -385,6 +384,7 @@ tv.broadcasting.ro
 tv.cdn.xsg.ge
 tv.city.bg
 tv.samaragis.ru
+tv.teamm.workers.dev
 tv.ttk.mx
 tv.tuva.ru
 tva.ua
