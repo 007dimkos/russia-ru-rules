@@ -381,7 +381,6 @@ tv.a21network.ru
 tv.broadcasting.ro
 tv.cdn.xsg.ge
 tv.city.bg
-tv.konon.workers.dev
 tv.samaragis.ru
 tv.ttk.mx
 tv.tuva.ru
