@@ -86,18 +86,14 @@ fe-sib.svc.iptv.rt.ru
 fe-sth.svc.iptv.rt.ru
 fe-ural.svc.iptv.rt.ru
 fe-vlg.svc.iptv.rt.ru
-files.kick.com
-files.w.tv
 flussonic.mkpnet.ru
 flussonic.powernet.com.ru
 freshtv-live.ru
 fs.uplink.kz
 ftp.orbita.dn.ua
-ggate.media
 github.com
 goodgame.ru
 hd.traveltv.bg
-headicon.trovo.live
 hls-03-video.webcaramba.com
 hls-alaniatv.cdnvideo.ru
 hls-mycdn08724960135.cdnvideo.ru
@@ -116,14 +112,11 @@ hostrec.ru
 hz1.teleport.cc
 i.ibb.co
 i.imgur.com
-i.pinimg.com
 i.postimg.cc
 i2.wp.com
 iam-profi.ru
 igi-hls.cdnvideo.ru
 ikomg-kazakh.akamaized.net
-images.contactout.com
-images.live.vkplay.ru
 images.live.vkvideo.ru
 images.sr.roku.com
 img.catcast.tv
@@ -141,10 +134,8 @@ k3.usastreams.com
 karapuztv.catcast.tv
 kb.catcast.tv
 kino-1.catcast.tv
-kino-stream.online
 kinowalk.hopto.org
 kk.fluid.stream
-lastfm.freetls.fastly.net
 lbgo.bozztv.com
 lightning-now70s-samsungnz.amagi.tv
 lightning-now80s-samsungnz.amagi.tv
@@ -200,7 +191,6 @@ online.video.rbc.ru
 orbita.dn.ua
 osnmedia.servicecdn.ru
 ottpink.network
-p16-sg.tiktokcdn.com
 pbs.twimg.com
 peqk71plnjy.a.trbcdn.net
 pic.rtbcdn.ru
@@ -314,8 +304,6 @@ rt-vlg-srnk-htlive.cdn.ngenix.net
 rt-vlg-ul-htlive.cdn.ngenix.net
 rt-vlg-yola-htlive.cdn.ngenix.net
 rtpmedia-pull-hls.cdnvideo.ru
-ru.epg.one
-s10.iimage.su
 s14131.cdn.ngenix.net
 s14553.cdn.ngenix.net
 s20441.cdn.ngenix.net
@@ -334,7 +322,6 @@ sevas.1tvcrimea.ru
 sezon.tv
 simf.1tvcrimea.ru
 sitv.ru
-smotret.tv
 sonhls.persiana.live
 sovsekretno.tv
 sportsgrid-tribal.amagi.tv
@@ -363,7 +350,6 @@ streaming.goodstream.cyou
 streaming.goodstream.icu
 streaming.televizor-24-tochka.ru
 streaming.thestream.cyou
-sun9-36.userapi.com
 svoetv.mediacdn.ru
 tele2dvrnat01-02.cdnvideo.ru
 televizor24tochka.ru
