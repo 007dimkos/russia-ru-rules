@@ -1,7 +1,6 @@
 12channel.bonus-tv.ru
 136723.edgevideo.ru
 1tourtv.ru
-1tvkz-stream.daitsuna.net
 30a-tv.com
 4kuhls.persiana.live
 56b50ada2d659.streamlock.net
@@ -72,7 +71,7 @@ dvb.by
 dvnftgdlbnemm.cloudfront.net
 e10-ll.facecast.net
 eco.streams.ovh
-edge4.1internet.tv
+edge04.1internet.tv
 edge50.dc.beltelecom.by
 edge53.dc.beltelecom.by
 edge55.dc.beltelecom.by
@@ -116,7 +115,6 @@ i.postimg.cc
 i2.wp.com
 iam-profi.ru
 igi-hls.cdnvideo.ru
-ikomg-kazakh.akamaized.net
 images.live.vkvideo.ru
 images.sr.roku.com
 img.catcast.tv
@@ -184,6 +182,7 @@ n1.slavmir.tv
 ncdn.telewebion.ir
 ngtrk.dc.beltelecom.by
 noshls.persiana.live
+nosignal1.antenaplay.ro
 novoetv.kz
 nw.foreman.pp.ua
 ocko-live.ssl.cdn.cra.cz
