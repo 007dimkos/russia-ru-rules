@@ -4,7 +4,8 @@
     {
       "domain": [
         "igroshop.com",
-        "vk.com"
+        "vk.com",
+        "bigolive.tv"
       ],
       "domain_suffix": [
         ".ru",
@@ -30,6 +31,8 @@
         ".appmetrica.io",
         ".ngenix.net",
         ".bigo.tv"
+        ".bigolive.tv",
+        ".bigovideo.tv"
       ]
     }
   ]
