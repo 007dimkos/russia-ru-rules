@@ -490,3 +490,14 @@ wz-kt.ktk.kz
 yaroslavl.mediacdn.ru
 zabava-htlive.cdn.ngenix.net
 zvukoff.usite.pro
+chat.bigo.tv
+sitemap.bigo.tv
+statistics.bigo.tv
+www.bigo.tv
+go.bigo.tv
+live.bigo.tv
+mail.bigo.tv
+blog.bigo.tv
+mobile.bigo.tv
+s.bigo.tv
+mx.bigo.tv
