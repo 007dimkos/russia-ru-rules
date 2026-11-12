@@ -134,7 +134,6 @@ kb.catcast.tv
 kino-1.catcast.tv
 kinowalk.hopto.org
 kk.fluid.stream
-lbgo.bozztv.com
 lightning-now70s-samsungnz.amagi.tv
 lightning-now80s-samsungnz.amagi.tv
 lightning-now90s-samsungnz.amagi.tv
@@ -171,8 +170,6 @@ m1b2.worldcast.tv
 m2b2.worldcast.tv
 matur-tv.ru
 mbit1.worldcast.tv
-mbmh5s36ok.a.trbcdn.net
-mhd116.iptv2022.com
 msh0203.stream.seeweb.it
 musichls.persiana.live
 muzzik-live.morescreens.com
@@ -250,6 +247,7 @@ river-6-605.rtbcdn.ru
 river-6-606.rtbcdn.ru
 river-m9-comc-d3102.rtbcdn.ru
 river-ntv-comc-d403.rtbcdn.ru
+rpn3.bozztv.com
 rt-ct-belg-htlive.cdn.ngenix.net
 rt-ct-bryansk-htlive.cdn.ngenix.net
 rt-ct-ivan-htlive.cdn.ngenix.net
