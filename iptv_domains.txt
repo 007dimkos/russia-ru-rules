@@ -332,7 +332,6 @@ stream.almaz-media.tv
 stream.e2is.in
 stream.ecable.tv
 stream.fastlnk.ru
-stream.mcquack.net
 stream.mediawork.cz
 stream.novouralsk-news.ru
 stream.ntktv.ua
