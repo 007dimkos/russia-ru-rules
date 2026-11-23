@@ -1,5 +1,6 @@
 12channel.bonus-tv.ru
 136723.edgevideo.ru
+183.giatvcdn.com
 1tourtv.ru
 30a-tv.com
 4kuhls.persiana.live
@@ -134,6 +135,7 @@ kb.catcast.tv
 kino-1.catcast.tv
 kinowalk.hopto.org
 kk.fluid.stream
+light.tvp.pp.ru
 lightning-now70s-samsungnz.amagi.tv
 lightning-now80s-samsungnz.amagi.tv
 lightning-now90s-samsungnz.amagi.tv
@@ -314,6 +316,7 @@ sevas.1tvcrimea.ru
 sezon.tv
 simf.1tvcrimea.ru
 sitv.ru
+social.tvp.pp.ru
 sonhls.persiana.live
 sovsekretno.tv
 sportsgrid-tribal.amagi.tv
@@ -371,6 +374,7 @@ v2.catcast.tv
 vcdn.produck.company
 vcdn1.produck.company
 video.radio-banovina.hr
+video1.getstreamhosting.com
 vipotv.com
 vod.tuva.ru
 web.onair-radio.eu
