@@ -28,6 +28,7 @@ bl.rutube.ru
 bl.video.matchtv.ru
 bozztv.com
 brics.bonus-tv.ru
+bridgemedia-hls.cdnvideo.ru
 brodilo.tv
 bst.bratsk.ru
 bsttv.bonus-tv.ru
